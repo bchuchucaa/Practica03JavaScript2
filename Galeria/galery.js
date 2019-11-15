@@ -13,21 +13,15 @@ var intervalo;
 
 function adelante(){
 	num++;
-	if(num>6){
-		num=0;
-		var foto=document.getElementById("foto");
-		foto.src=misImagenes[num];
-		console.log(misImagenes[num]);
+	if(num>4){
+		document.getElementById("siguiente").disabled = true;
+		console.log('boton bloqueado');
+	}else{
+		document.getElementById("siguiente").disabled = false;
 	}
 	var foto=document.getElementById("foto");
 	foto.src=misImagenes[num];
-}
-
-function aleatorio(){
-	num=parseInt(Math.random() * (5 - 0) + 0);
-	console.log(num);
-	var foto=document.getElementById("foto");
-	foto.src=misImagenes[num];
+	console.log(misImagenes[num]);
 }
 
 
@@ -41,6 +35,7 @@ function atras(){
 	}
 	var foto=document.getElementById("foto");
 	foto.src=misImagenes[num];
+	console.log(misImagenes[num])
 }
 function iniciar(){
 	for (var i = 0; i <5; i++) {
@@ -49,6 +44,6 @@ function iniciar(){
 	misImagenes[i]="foto"+number+".jpg";
 	console.log(misImagenes[i]);
 }
-	intervalo = setInterval(aleatorio, TIEMPO_INTERVALO_MILESIMAS_SEG);
+
 
 }
