@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GALERIA</title>
+    <script type="text/javascript" src="galery.js"></script>
+    <style type="text/css">
+        img{
+           padding-left: 0%;
+           border-color: black;
+           border-style: solid;
+        }
+        input{
+            
+            border-color: red;
+            border-style: solid;
+            float: left;
+            width: 20%;
+            text-align: center;
+            margin: 2px;
+            height: 30px;
+            background-color: black;
+            color: white;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        article{
+            padding-left: 30%;
+            padding-top: 16%;
+        }
+        body{
+            background-image: url('imgs/back.jpeg');
+        }
+    </style>
+</head>
+<body>
+    <form name="f1">
+      <article>
+        <img src="foto1.jpg" width="600" height="250" id="foto">
+        <br>
+
+        <input type="button" id="siguiente" value="Siguiente" onclick="adelante()">
+        <input type="button" value="Iniciar" onclick="iniciar()" >
+        <input type="button" value="Anterior" onclick="atras()">
+        </article>
+    </form>
+</body>
+</html>
